@@ -1,0 +1,118 @@
+/* Общие стили */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #F3DAD5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    width: 80%;
+    max-width: 1200px;
+    background: linear-gradient(145deg, #f8e3dd, #ffffff);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2), -10px -10px 30px rgba(255, 255, 255, 0.3);
+    position: relative;
+  }
+  
+  /* Верхняя панель */
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .dots {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: gray;
+  }
+  
+  .dot.red { background: #FF5F56; }
+  .dot.yellow { background: #FFBD2E; }
+  .dot.green { background: #27C93F; }
+  
+  .top-bar h2 {
+    font-size: 1.2rem;
+    text-align: end;
+    color: #555;
+  }
+  
+  /* Основной контент */
+  .main-content {
+    text-align: center;
+    margin: 50px 0;
+  }
+  
+  .circle {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    background: linear-gradient(145deg, #f8e6e0, #ffffff);
+    border-radius: 50%;
+    box-shadow: inset 10px 10px 30px rgba(0, 0, 0, 0.1), inset -10px -10px 30px rgba(255, 255, 255, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circle h1 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #444;
+  }
+  
+  .circle button {
+    background: linear-gradient(145deg, #ff8b9c, #ffa3b5);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2), -5px -5px 15px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .circle button:hover {
+    transform: translateY(-3px);
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3), -8px -8px 20px rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Нижняя панель */
+  .bottom-bar {
+    text-align: right;
+    margin-top: 20px;
+    color: #666;
+  }
+  .btn {
+    display: inline-block;
+    background: linear-gradient(145deg, #ff8b9c, #ffa3b5); /* Градиент для розовой кнопки */
+    color: white;
+    text-decoration: none; /* Убираем подчеркивание */
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2), -5px -5px 15px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3), -8px -8px 20px rgba(255, 255, 255, 0.5);
+  }
+  

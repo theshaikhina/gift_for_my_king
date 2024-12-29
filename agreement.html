@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agreement</title>
+  <link rel="stylesheet" href="dark_theme.css">
+  <link rel="stylesheet" href="agreement.css">
+</head>
+<body class="dark-theme">
+  <div class="container">
+    <!-- Верхняя панель -->
+    <div class="top-bar">
+      <div class="dots">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
+    </div>
+
+    <!-- Основной контент -->
+    <div class="main-content">
+      <h1>Соглашение</h1>
+      <div class="agreement-text">
+        <p>Перед отправлением в наше путешествие, пожалуйста, подтвердите согласие со следующими пунктами:</p>
+        <form id="agreement-form">
+            <label>
+              <input type="checkbox" class="agreement-checkbox"> Я согласен быть счастливым с тобой.
+            </label>
+            <label>
+              <input type="checkbox" class="agreement-checkbox"> Я понимаю, что не все будет гладко, но приложу все усилия со своей стороны, чтоб между нами все было хорошо.
+            </label>
+            <label>
+              <input type="checkbox" class="agreement-checkbox"> Я несу ответственность за свои действия по отношению к тебе.
+            </label>
+            <label>
+              <input type="checkbox" class="agreement-checkbox"> Я готов подарить свое сердце тебе.
+            </label>
+            <label>
+              <input type="checkbox" class="agreement-checkbox"> Я готов довериться душой и телом .
+            </label>
+            <label>
+              <input type="checkbox" class="agreement-checkbox"> Я подтверждаю, что готов отправиться с тобой в будущее.
+            </label>
+        </form>
+      </div>
+      <div class="button-group">
+        <a href="first_page.html" class="btn btn-decline">Отклонить</a>
+        <button id="accept-btn" class="btn btn-accept" disabled>Принять</button>
+      </div>
+    </div>
+  </div>
+  <script src="agreement.js"></script>
+</body>
+</html>
