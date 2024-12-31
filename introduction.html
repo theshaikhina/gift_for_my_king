@@ -18,91 +18,98 @@
       </div>
     </div>
 
-    <!-- Основной контент -->
-    <div class="main-content">
-      <h1>ПУТЕВОДИТЕЛЬ</h1>
+    <!-- Заголовок страницы -->
+    <h1 class="page-title">ПУТЕВОДИТЕЛЬ</h1>
+
+    <!-- Описание страницы -->
+    <div class="page-description">
       <p>На этой странице ты сможешь найти все необходимые укромные уголочки, которые связывают нас с тобой.</p>
       <p>Необходимо лишь кликнуть по комнате, в которую ты хочешь провалиться, либо нажать "Начать путешествие", чтоб двигаться по порядку комнат.</p>
-      <div class="map-container">
-        <!-- Ветка Реальность -->
-        <div class="line reality-line">
-          <div class="main-icon reality-icon">
-            <a href="first_page.html">
-              <img src="reality.png" alt="Reality Icon" class="icon-image">
-            </a>
-            <p class="icon-label">РЕАЛЬНОСТЬ</p>
-          </div>
-          <!-- Подиконки для Реальность -->
-          <div class="sub-icons">
-            <a href="acquaintance.html">
-              <div class="sub-icon"></div>
-            </a>
-            <a href="rapprochement.html">
-              <div class="sub-icon"></div>
-            </a>
-            <a href="feelings.html">
-              <div class="sub-icon"></div>
-            </a>
-            <a href="fear.html">
-              <div class="sub-icon"></div>
-            </a>
-            <a href="trust.html">
-              <div class="sub-icon"></div>
-            </a>
-          </div>
-          <!-- Текст ЗНАКОМСТВО около первого круга -->
-          <div class="reality-text">ЗНАКОМСТВО</div>
-          <!-- Текст СБЛИЖЕНИЕ около второго круга -->
-          <div class="reality-text-second">СБЛИЖЕНИЕ</div>
-          <!-- Текст ЧУВСТВА около третьего круга -->
-          <div class="reality-text-third">ЧУВСТВА</div>
-          <!-- Текст СТРАХ около четвертого круга -->
-          <div class="reality-text-fourth">СТРАХ</div>
-          <!-- Текст ДОВЕРИЕ около пятого круга -->
-          <div class="reality-text-fifth">ДОВЕРИЕ</div>
+    </div>
 
-          <!-- Описание для Реальность -->
-          <div class="description-container">
-            <p>Здесь ты найдешь все произошедшие события, которые были в действительности.</p>
+    <!-- Разделитель -->
+    <hr class="divider">
+
+    <!-- Ветка Реальность -->
+    <div class="reality-container">
+      <div class="line reality-line">
+        <div class="main-icon">
+          <a href="first_page.html">
+            <img src="reality.png" alt="Reality Icon" class="icon-image">
+          </a>
+          <p class="icon-label">РЕАЛЬНОСТЬ</p>
+        </div>
+        <div class="sub-icons">
+          <div class="sub-icon-wrapper">
+            <a href="acquaintance.html" class="sub-icon"></a>
+            <p class="icon-text">ЗНАКОМСТВО</p>
+          </div>
+          <div class="sub-icon-wrapper">
+            <a href="rapprochement.html" class="sub-icon"></a>
+            <p class="icon-text">СБЛИЖЕНИЕ</p>
+          </div>
+          <div class="sub-icon-wrapper">
+            <a href="feelings.html" class="sub-icon"></a>
+            <p class="icon-text">ЧУВСТВА</p>
+          </div>
+          <div class="sub-icon-wrapper">
+            <a href="fear.html" class="sub-icon"></a>
+            <p class="icon-text">СТРАХ</p>
+          </div>
+          <div class="sub-icon-wrapper">
+            <a href="trust.html" class="sub-icon"></a>
+            <p class="icon-text">ДОВЕРИЕ</p>
           </div>
         </div>
-
-        <!-- Ветка Фантазия -->
-        <div class="line fantasy-line">
-          <div class="main-icon fantasy-icon">
-            <a href="fantasy.html">
-              <img src="fantasy.png" alt="Fantasy Icon" class="icon-image">
-            </a>
-            <p class="icon-label">ФАНТАЗИЯ</p>
-          </div>
-          <!-- Подиконки для Фантазия -->
-          <div class="sub-icons">
-            <div class="sub-icon"></div>
-            <div class="sub-icon"></div>
-            <div class="sub-icon"></div>
-            <div class="sub-icon"></div>
-            <div class="sub-icon"></div>
-          </div>
-          <!-- Текст УВЛЕЧЕНИЯ около первого круга -->
-          <div class="fantasy-text">УВЛЕЧЕНИЯ</div>
-          <!-- Текст УЮТ около второго круга -->
-          <div class="fantasy-text-second">УЮТ</div>
-          <!-- Текст ПУТЕШЕСТВИЯ около третьего круга -->
-          <div class="fantasy-text-third">ПУТЕШЕСТВИЯ</div>
-          <!-- Текст РОМАНТИКА около четвертого круга -->
-          <div class="fantasy-text-fourth">РОМАНТИКА</div>
-          <!-- Текст ПОДДЕРЖКА около пятого круга -->
-          <div class="fantasy-text-fifth">ПОДДЕРЖКА</div>
-          <!-- Описание для Фантазия -->
-          <div class="description-container fantasy-description">
-            <p>А в этой ветке мы окунемся в наш выдуманный мир, который мы однажды всеми усилиями построим.</p>
-          </div>
+        <div class="description-container" style="color: #000000;">
+          <p style="color: #000000;">Здесь ты найдешь все произошедшие события, которые были в действительности.</p>
         </div>
       </div>
-      <!-- Кнопка "Начать путешествие" -->
-      <div class="start-journey-btn">
-        <a href="acquaintance.html" class="btn">Начать путешествие</a>
+    </div>
+
+    <!-- Разделитель -->
+    <hr class="divider">
+
+    <!-- Ветка Фантазия -->
+    <div class="fantasy-container">
+      <div class="line fantasy-line">
+        <div class="main-icon">
+          <a href="fantasy.html">
+            <img src="fantasy.png" alt="Fantasy Icon" class="icon-image">
+          </a>
+          <p class="icon-label">ФАНТАЗИЯ</p>
+        </div>
+        <div class="sub-icons">
+          <div class="sub-icon-wrapper">
+            <a href="hobby.html" class="sub-icon"></a>
+            <p class="icon-text">УВЛЕЧЕНИЯ</p>
+          </div>
+          <div class="sub-icon-wrapper">
+            <a href="coziness.html" class="sub-icon"></a>
+            <p class="icon-text">УЮТ</p>
+          </div>
+          <div class="sub-icon-wrapper">
+            <a href="travels.html" class="sub-icon"></a>
+            <p class="icon-text">ПУТЕШЕСТВИЯ</p>
+          </div>
+          <div class="sub-icon-wrapper">
+            <a href="romance.html" class="sub-icon"></a>
+            <p class="icon-text">РОМАНТИКА</p>
+          </div>
+          <div class="sub-icon-wrapper">
+            <a href="support.html" class="sub-icon"></a>
+            <p class="icon-text">ПОДДЕРЖКА</p>
+          </div>
+        </div>
+        <div class="description-container fantasy-description">
+          <p>А в этой ветке мы окунемся в наш выдуманный мир, который мы однажды всеми усилиями построим.</p>
+        </div>
       </div>
+    </div>
+
+    <!-- Кнопка "Начать путешествие" -->
+    <div class="start-journey-btn">
+      <a href="acquaintance.html" class="btn">Начать путешествие</a>
     </div>
   </div>
 </body>

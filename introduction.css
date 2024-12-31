@@ -58,8 +58,9 @@ body {
 /* Линии */
 .line {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
   position: relative;
 }
 
@@ -67,54 +68,72 @@ body {
   content: '';
   position: absolute;
   height: 6px;
-  width: 80%;
+  width: calc(100% - 100px); /* Динамическая ширина линии */
   background: #1e1e1e;
   top: 50%;
-  left: 10%;
-  box-shadow: 0 15px 7px rgb(0, 0, 0);
+  left: 50px;
   border-radius: 2px;
+  box-shadow: 0px 10px 9px rgba(0, 0, 0, 0.9); /* Добавляем тень */
   z-index: 0;
 }
 
 .reality-line::before {
   background-color: #464545fa;
+  top: 52%; /* Настройка уровня линии */
 }
 
 .fantasy-line::before {
   background-color: #908e8e;
+  top: 52%; /* Настройка уровня линии */
 }
 
+/* Основные иконки */
 .main-icon {
-  position: relative;
-  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
   text-align: center;
-  margin-right: 20px;
+  margin-bottom: 0;
+  transform: translateY(-10px);
 }
 
 .icon-image {
-  width: 120px;
+  width: 100%;
+  max-width: 180px; /* Адаптивная ширина */
   height: auto;
+  object-fit: contain;
 }
 
 .icon-label {
-  margin-top: 5px;
+  margin-top: 0px;
   font-size: 1rem;
   font-weight: bold;
   color: #ffffff;
 }
 
+/* Подиконки с текстом */
 .sub-icons {
   display: flex;
-  gap: 90px;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0px;
+  z-index: 2;
+}
+
+.sub-icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .sub-icon {
-  position: relative;
   width: 50px;
   height: 50px;
   background: linear-gradient(145deg, #ffffff, #e6e6e6);
-  border: 2px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  margin-bottom: 5px;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4), -3px -3px 6px rgba(0, 0, 0, 0.7);
   transition: transform 0.3s ease-in-out;
 }
@@ -124,218 +143,46 @@ body {
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6), -4px -4px 8px rgba(0, 0, 0, 0.8);
 }
 
+.icon-text {
+  font-size: 12px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+
+/* Реальность */
 .reality-line .sub-icon {
   background: linear-gradient(145deg, #e0e0e0, #a0a0a0);
   border: 2px solid #c0c0c0;
-  box-shadow: 
-    2px 2px 4px rgba(0, 0, 0, 0.5),
-    inset -2px -2px 4px rgba(0, 0, 0, 0.3),
-    inset 2px 2px 4px rgba(255, 255, 255, 0.4);
-  border-radius: 50%;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .reality-line .sub-icon:hover {
-  transform: scale(1.2);
   background: linear-gradient(145deg, #ffffff, #c4c4c4);
-  box-shadow: 
-    4px 4px 8px rgba(0, 0, 0, 0.6),
-    inset -3px -3px 6px rgba(0, 0, 0, 0.4),
-    inset 3px 3px 6px rgba(255, 255, 255, 0.6);
 }
 
+/* Фантазия */
 .fantasy-line .sub-icon {
   background: linear-gradient(145deg, #767163, #5e5a50);
   border: 2px solid #4f4b40;
-  box-shadow: 
-    2px 2px 4px rgba(0, 0, 0, 0.5),
-    inset -2px -2px 4px rgba(0, 0, 0, 0.3),
-    inset 2px 2px 4px rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .fantasy-line .sub-icon:hover {
-  transform: scale(1.2);
   background: linear-gradient(145deg, #8a8574, #716d62);
-  box-shadow: 
-    4px 4px 8px rgba(0, 0, 0, 0.6),
-    inset -3px -3px 6px rgba(0, 0, 0, 0.4),
-    inset 3px 3px 6px rgba(255, 255, 255, 0.2);
 }
 
-/* Стили для текста ЗНАКОМСТВО около первого круга */
-.reality-text {
-  font-size: 12px;
-  font-weight: normal;
-  color: #ffffff;
-  position: absolute;
-  top: 120px;
-  left: 169px; /* Располагаем текст справа от первого круга */
-  transform: translateY(-50%);
-  text-transform: uppercase;
-}
-
-/* Стили для текста СБЛИЖЕНИЕ около второго круга */
-.reality-text-second {
-  font-size: 12px;
-  font-weight: normal;
-  color: #ffffff;
-  position: absolute;
-  top: 120px;
-  left: 315px; /* Располагаем текст рядом со вторым кругом */
-  transform: translateY(-50%);
-  text-transform: uppercase;
-}
-
-/* Стили для текста ЧУВСТВА около третьего круга */
-.reality-text-third {
-  font-size: 12px;
-  font-weight: normal;
-  color: #ffffff;
-  position: absolute;
-  top: 120px;
-  left: 467px; /* Располагаем текст рядом с третьим кругом */
-  transform: translateY(-50%);
-  text-transform: uppercase;
-}
-
-/* Стили для текста СТРАХ около четвертого круга */
-.reality-text-fourth {
-  font-size: 12px;
-  font-weight: normal;
-  color: #ffffff;
-  position: absolute;
-  top: 120px;
-  left: 618px; /* Располагаем текст рядом с четвертым кругом */
-  transform: translateY(-50%);
-  text-transform: uppercase;
-}
-
-/* Стили для текста ДОВЕРИЕ около пятого круга */
-.reality-text-fifth {
-  font-size: 12px;
-  font-weight: normal;
-  color: #ffffff;
-  position: absolute;
-  top: 120px;
-  left: 755px; /* Располагаем текст рядом с пятым кругом */
-  transform: translateY(-50%);
-  text-transform: uppercase;
-}
-
-/* Стили для текста УВЛЕЧЕНИЯ около первого круга */
-.fantasy-text {
-  font-size: 12px;
-  font-weight: normal;
-  color: #ffffff;
-  position: absolute;
-  top: 120px;
-  left: 169px; /* Располагаем текст справа от первого круга */
-  transform: translateY(-50%);
-  text-transform: uppercase;
-}
-
-/* Стили для текста УЮТ около второго круга */
-.fantasy-text-second {
-  font-size: 12px;
-  font-weight: normal;
-  color: #ffffff;
-  position: absolute;
-  top: 120px;
-  left: 337px; /* Располагаем текст рядом со вторым кругом */
-  transform: translateY(-50%);
-  text-transform: uppercase;
-}
-
-/* Стили для текста ПУТЕШЕСТВИЯ около третьего круга */
-.fantasy-text-third {
-  font-size: 12px;
-  font-weight: normal;
-  color: #ffffff;
-  position: absolute;
-  top: 120px;
-  left: 450px; /* Располагаем текст рядом с третьим кругом */
-  transform: translateY(-50%);
-  text-transform: uppercase;
-}
-
-/* Стили для текста РОМАНТИКА около четвертого круга */
-.fantasy-text-fourth {
-  font-size: 12px;
-  font-weight: normal;
-  color: #ffffff;
-  position: absolute;
-  top: 120px;
-  left: 600px; /* Располагаем текст рядом с четвертым кругом */
-  transform: translateY(-50%);
-  text-transform: uppercase;
-}
-
-/* Стили для текста ПОДДЕРЖКА около пятого круга */
-.fantasy-text-fifth {
-  font-size: 12px;
-  font-weight: normal;
-  color: #ffffff;
-  position: absolute;
-  top: 120px;
-  left: 740px; /* Располагаем текст рядом с пятым кругом */
-  transform: translateY(-50%);
-  text-transform: uppercase;
-}
-/* Описание для каждого раздела */
+/* Описание */
 .description-container {
-  font-size: 14px;
-  color: #b0b0b0;
+  background-color: #333333;
+  border: 2px solid #555555;
+  border-radius: 8px;
+  padding: 20px;
   margin-top: 10px;
-  max-width: 300px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 800px;
   text-align: center;
-}
-
-/* Для ветки Реальность */
-.reality-description {
-  font-size: 14px;
-  color: #ffffff;
-  margin-top: 10px;
-  max-width: 300px;
-  margin-left: 50px;
-  margin-right: auto;
-  text-align: center;
-  position: relative; /* Добавляем позиционирование */
-  z-index: 2;
-}
-
-/* Для ветки Фантазия */
-.fantasy-description {
-  font-size: 14px;
-  color: #ffffff;
-  margin-top: 10px;
-  max-width: 300px;
-  margin-left: 50px;
-  margin-right: auto;
-  text-align: center;
-  position: relative; /* Добавляем позиционирование */
-  z-index: 2;
-}
-/* Контейнер для описания с фоном и рамкой */
-.description-container {
-  background-color: #333333; /* Сплошной темный фон */
-  border: 2px solid #555555; /* Рамка вокруг текста */
-  border-radius: 8px; /* Скругленные углы */
-  padding: 20px; /* Отступы внутри */
-  margin-top: 10px; /* Отступ сверху */
-  max-width: 800px; /* Ширина контейнера */
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  color: #fffcfc; /* Цвет текста */
+  color: #fffcfc;
   font-size: 14px;
   line-height: 1.5;
-  z-index: 2;
 }
-
 
 .start-journey-btn {
   margin-top: 40px;
@@ -343,7 +190,7 @@ body {
 }
 
 .start-journey-btn .btn {
-  background: linear-gradient(145deg, #1d8f33, #14a24e); /* Button color */
+  background: linear-gradient(145deg, #1d8f33, #14a24e);
   padding: 15px 30px;
   font-size: 1.1rem;
   border-radius: 30px;
@@ -356,3 +203,270 @@ body {
   background: linear-gradient(145deg, #148f33, #1d7e24);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
+
+/* Заголовок страницы */
+.page-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 18px 0;
+  color: #ffffff;
+}
+
+/* Описание страницы */
+.page-description {
+  background-color: #2a2a2a;
+  border: 2px solid #555555;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Разделитель */
+.divider {
+  border: none;
+  border-top: 2px solid #555555;
+  margin: 30px 0;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.5;
+}
+
+/* Контейнер для веток */
+.branch-container {
+  background-color: #252525;
+  border: 2px solid #444444;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Контейнер для веток */
+.branch-container {
+  background-color: #252525;
+  border: 2px solid #444444;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Заголовки веток */
+.branch-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+/* Контейнер для ветки Реальность */
+.reality-container {
+  background: linear-gradient(
+      rgba(116, 113, 113, 0.7), 
+      rgba(97, 85, 85, 0.7)
+    ), 
+    url('https://media.istockphoto.com/id/1369748264/ru/%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F/%D0%B0%D0%B1%D1%81%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%BD%D1%8B%D0%B9-%D0%B1%D0%B5%D0%BB%D1%8B%D0%B9-%D1%84%D0%BE%D0%BD-%D0%B3%D0%B5%D0%BE%D0%BC%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F-%D1%82%D0%B5%D0%BA%D1%81%D1%82%D1%83%D1%80%D0%B0.jpg?s=612x612&w=0&k=20&c=dc13kt1xCIBjoTV2uDCmcHEKAWsNoPpfOQmldfvVUjQ=') no-repeat center center; /* Фоновая картинка */
+  background-size: cover; /* Масштабирование изображения */
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px); /* Размытие заднего плана */
+  color: #000000; /* Черный текст */
+  position: relative; /* Для корректного отображения псевдоэлементов */
+}
+
+/* Контейнер для ветки Фантазия */
+.fantasy-container {
+  background: linear-gradient(
+      rgba(50, 50, 50, 0.7), 
+      rgba(30, 30, 30, 0.7)
+    ), 
+    url('https://foni.papik.pro/uploads/posts/2024-10/thumbs/foni-papik-pro-7n8x-p-kartinki-fon-temnii-na-prozrachnom-fone-28.png') no-repeat center center; /* Фоновая картинка */
+  background-size: cover; /* Масштабирование изображения */
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(850px); /* Размытие заднего плана */
+  color: #ffffff; /* Белый текст */
+  position: relative; /* Для корректного отображения псевдоэлементов */
+}
+/* Описание в контейнере Реальность */
+.reality-container .description-container {
+  background: rgba(196, 187, 187, 0.95); /* Почти белый фон для описания */
+  border-radius: 10px;
+  padding: 15px;
+  color: #000000 !important; /* Черный текст */
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+  backdrop-filter: blur(5px); /* Легкое размытие заднего плана */
+  border: 1px solid rgba(96, 95, 95, 0.8); /* Светлая рамка */
+}
+
+/* Текст внутри описания */
+.reality-container .description-container p {
+  text-shadow: none; /* Убираем лишние тени для текста */
+  font-weight: 500; /* Легкое утолщение текста */
+}
+
+/* Стили текста под иконками для Реальности */
+.reality-container .icon-label,
+.reality-container .icon-text {
+  color: #000000;
+  text-shadow: 
+    1px 1px 2px rgba(255, 255, 255, 0.6),
+    -1px -1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Стили текста под иконками для Фантазии */
+.fantasy-container .icon-label,
+.fantasy-container .icon-text {
+  color: #ffffff;
+  text-shadow: 
+    1px 1px 2px rgba(0, 0, 0, 0.6),
+    -1px -1px 2px rgba(255, 255, 255, 0.3);
+}
+
+/* Адаптивность заголовка */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .reality-line .sub-icons {
+    margin-top: -15px; /* Уменьшаем подъем подиконок для средних экранов */
+  }
+
+  .reality-line .main-icon {
+    transform: translateY(-8px); /* Чуть меньший подъем основной иконки */
+  }
+}
+/* Дополнительный медиазапрос для совсем маленьких экранов (до 480px) */
+@media (max-width: 480px) {
+  .line::before {
+    width: calc(100% - 60px); /* Еще больше сокращаем линии */
+    left: 30px;
+    top: 50%;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .main-icon {
+    width: 90px; /* Еще больше уменьшаем основную иконку */
+  }
+
+  .icon-image {
+    max-width: 100px;
+  }
+
+  .icon-label {
+    font-size: 0.7rem; /* Сужаем текст под основной иконкой */
+  }
+
+  .sub-icon {
+    width: 27px;
+    height: 27px; /* Уменьшаем подиконки */
+    margin-top: 0px;
+  }
+
+  .sub-icons {
+    margin-top: -50px;
+  }
+
+  .icon-text {
+    font-size: 8px; /* Уменьшаем текст под подиконками */
+  }
+
+  .description-container {
+    font-size: 10px; /* Еще меньше текст в описании */
+  }
+
+  .start-journey-btn .btn {
+    font-size: 0.9rem; /* Уменьшаем размер текста кнопки */
+    padding: 8px 16px; /* Еще меньше отступы */
+  }
+
+  .reality-line .sub-icons {
+    margin-top: 40px; /* Увеличьте для ветки "Реальность" */
+  }
+  
+  .fantasy-line .sub-icons {
+    margin-top: 40px; /* Для ветки "Фантазия" */
+  }
+
+  .page-description {
+    max-width: 300px; /* Еще больше уменьшаем ширину */
+    padding: 10px; /* Минимальные отступы */
+    font-size: 0.7rem; /* Еще меньше текст */
+    line-height: 1.3; /* Сокращаем высоту строки для компактности */
+  }
+
+  .reality-container .sub-icons .icon-text {
+    font-size: 0.5rem;
+  }
+  .reality-container .description-container {
+    font-size: 0.7rem; /* Уменьшаем общий размер текста */
+    padding: 10px; /* Уменьшаем внутренние отступы */
+  }
+
+  .reality-container .description-container p {
+    font-size: 0.7rem; /* Уменьшаем размер текста параграфа */
+  }
+  .fantasy-container .description-container {
+    font-size: 0.7rem; /* Уменьшаем общий размер текста */
+    padding: 10px; /* Уменьшаем внутренние отступы */
+  }
+
+  .fantasy-container .description-container p {
+    font-size: 0.7rem; /* Уменьшаем размер текста параграфа */
+  }
+
+  .reality-line .sub-icons {
+    margin-top: 15px; /* Минимальный подъем подиконок для маленьких экранов */
+  }
+  .reality-line .sub-icons,
+  .fantasy-line .sub-icons {
+    margin-top: -5px; /* Минимальный подъем для компактного размещения */
+  }
+
+  .reality-container .description-container,
+  .fantasy-container .description-container {
+    margin-top: -10px; /* Поднимаем описание чуть ближе */
+  }
+
+  .fantasy-line::before {
+    background-color: #908e8e;
+    top: 45%; /* Регулировка вертикального выравнивания */
+  }
+
+  .fantasy-container .sub-icons {
+    margin-top: -10px; /* Дополнительно поднимаем подиконки */
+  }
+
+  .fantasy-container .description-container {
+    margin-top: -10px; /* Поднимаем описание, если нужно */
+  }
+
+  .reality-line::before {
+    background-color: #908e8e;
+    top: 45%; /* Регулировка вертикального выравнивания */
+  }
+
+  .reality-container .sub-icons {
+    margin-top: -10px; /* Дополнительно поднимаем подиконки */
+  }
+
+  .reality-container .description-container {
+    margin-top: -10px; /* Поднимаем описание, если нужно */
+  }
+}
+
