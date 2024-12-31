@@ -269,10 +269,10 @@ body {
 /* Контейнер для ветки Реальность */
 .reality-container {
   background: linear-gradient(
-      rgba(116, 113, 113, 0.7), 
-      rgba(97, 85, 85, 0.7)
+      rgba(81, 80, 80, 0.7), 
+      rgba(220, 217, 217, 0.7)
     ), 
-    url('https://media.istockphoto.com/id/1369748264/ru/%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F/%D0%B0%D0%B1%D1%81%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%BD%D1%8B%D0%B9-%D0%B1%D0%B5%D0%BB%D1%8B%D0%B9-%D1%84%D0%BE%D0%BD-%D0%B3%D0%B5%D0%BE%D0%BC%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F-%D1%82%D0%B5%D0%BA%D1%81%D1%82%D1%83%D1%80%D0%B0.jpg?s=612x612&w=0&k=20&c=dc13kt1xCIBjoTV2uDCmcHEKAWsNoPpfOQmldfvVUjQ=') no-repeat center center; /* Фоновая картинка */
+    url('https://png.pngtree.com/thumb_back/fw800/background/20231023/pngtree-dark-edged-grey-texture-background-with-dust-and-scratched-surface-image_13691113.png') no-repeat center center; /* Фоновая картинка */
   background-size: cover; /* Масштабирование изображения */
   border-radius: 5px;
   padding: 20px;
@@ -286,7 +286,7 @@ body {
 .fantasy-container {
   background: linear-gradient(
       rgba(50, 50, 50, 0.7), 
-      rgba(30, 30, 30, 0.7)
+      rgba(92, 92, 92, 0.7)
     ), 
     url('https://foni.papik.pro/uploads/posts/2024-10/thumbs/foni-papik-pro-7n8x-p-kartinki-fon-temnii-na-prozrachnom-fone-28.png') no-repeat center center; /* Фоновая картинка */
   background-size: cover; /* Масштабирование изображения */

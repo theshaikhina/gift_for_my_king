@@ -1,116 +1,148 @@
 /* Общие стили */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #1e1e1e;
-    color: #ffffff;
-  }
-  
-  .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .top-bar {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 10px;
-  }
-  
-  .dots {
-    display: flex;
-    gap: 8px;
-  }
-  
-  .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-  }
-  
-  .dot.red {
-    background-color: #ff5f56;
-  }
-  
-  .dot.yellow {
-    background-color: #ffbd2e;
-  }
-  
-  .dot.green {
-    background-color: #27c93f;
-  }
-  
-  .main-content {
-    text-align: center;
-  }
-  
-  h1 {
-    font-size: 2rem;
-    margin-top: 50px;
-  }
-  
-  /* Текст в рамке для знакомства */
-  .acquaintance-text {
-    background-color: #333333; /* Темный фон для блока */
-    border: 2px solid #555555; /* Рамка */
-    border-radius: 8px; /* Скругленные углы */
-    padding: 20px;
-    margin-top: 20px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    color: #fff;
-    font-size: 16px;
-    line-height: 1.6;
-  }
-  
-  /* Кнопка продолжения */
-  .bottom-bar {
-    text-align: center;
-    margin-top: 50px;
-  }
-  
-  .bottom-bar .btn {
-    display: inline-block;
-    background: linear-gradient(145deg, rgba(90, 90, 90, 0.9), rgba(74, 74, 74, 0.9));
-    color: rgba(224, 224, 224, 0.9);
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 25px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(60, 60, 60, 0.4);
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .bottom-bar .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.7), -8px -8px 20px rgba(60, 60, 60, 0.5);
-  }
-  
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot.red {
+  background-color: #ff5f56;
+}
+
+.dot.yellow {
+  background-color: #ffbd2e;
+}
+
+.dot.green {
+  background-color: #27c93f;
+}
+
+.main-content {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-top: 50px;
+}
+
+/* Текст в рамке для знакомства */
+.acquaintance-text {
+  background-color: #333333; /* Темный фон для блока */
+  border: 2px solid #555555; /* Рамка */
+  border-radius: 8px; /* Скругленные углы */
+  padding: 20px;
+  margin-top: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Кнопка продолжения */
+.bottom-bar {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.bottom-bar .btn {
+  display: inline-block;
+  background: linear-gradient(145deg, rgba(90, 90, 90, 0.9), rgba(74, 74, 74, 0.9));
+  color: rgba(224, 224, 224, 0.9);
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 25px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(60, 60, 60, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.bottom-bar .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.7), -8px -8px 20px rgba(60, 60, 60, 0.5);
+}
+
 /* Новый стиль для кнопки перехода на Introduction */
 .btn-introduction {
-    background-color: #575122; /* Замените на нужный цвет */
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 25px;
-    color: white;
-    text-align: center;
-    display: inline-block;
-    font-size: 13px;
-    position: absolute; /* Позиционируем кнопку */
-    top: 30px; /* Расстояние от верхнего края */
-    right: 170px; /* Расстояние от правого края */
+  background-color: #575122; /* Цвет кнопки */
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 25px;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 13px;
+  position: absolute; /* Позиционируем кнопку */
+  top: 30px; /* Расстояние от верхнего края */
+  right: 170px; /* Расстояние от правого края */
+}
+
+.btn-introduction:hover {
+  background-color: #655e24; /* Цвет при наведении */
+  transform: translateY(-3px);
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.7), -8px -8px 20px rgba(60, 60, 60, 0.5);
+}
+
+/* Адаптация для iPhone и устройств шириной до 480px */
+@media (max-width: 480px) {
+  h1 {
+      font-size: 1.5rem;
+      margin-top: 30px;
   }
-  
-  .btn-introduction:hover {
-    background-color: #655e24; /* Цвет при наведении */
-    transform: translateY(-3px);
-    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.7), -8px -8px 20px rgba(60, 60, 60, 0.5);
+
+  .acquaintance-text {
+      padding: 10px;
+      font-size: 12px;
+      line-height: 1.4;
+      max-width: 95%; /* Уменьшить ширину текста */
   }
-  
+
+  .bottom-bar .btn {
+      font-size: 0.8rem;
+      padding: 6px 15px;
+      border-radius: 20px;
+  }
+
+  .btn-introduction {
+      padding: 6px 12px;
+      font-size: 10px;
+      top: 25px; /* Уменьшаем отступ сверху */
+      right: 30px; /* Уменьшаем отступ справа */
+  }
+
+  /* Уменьшаем отступы */
+  .container {
+      padding: 10px;
+  }
+}

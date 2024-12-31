@@ -54,7 +54,7 @@ body {
   }
   
   /* Текст в рамке для знакомства */
-  .feelings-text {
+  .hobbies-text {
     background-color: #333333; /* Темный фон для блока */
     border: 2px solid #555555; /* Рамка */
     border-radius: 8px; /* Скругленные углы */
@@ -113,35 +113,36 @@ body {
     transform: translateY(-3px);
     box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.7), -8px -8px 20px rgba(60, 60, 60, 0.5);
   }
-  /* Адаптация для iPhone и устройств шириной до 480px */
+  /* Адаптивные стили */
+
 @media (max-width: 480px) {
-  h1 {
-      font-size: 1.5rem;
-      margin-top: 30px;
+    h1 {
+        font-size: 1.5rem;
+        margin-top: 30px;
+    }
+  
+    .hobbies-text {
+        padding: 10px;
+        font-size: 12px;
+        line-height: 1.4;
+        max-width: 95%; /* Уменьшить ширину текста */
+    }
+  
+    .bottom-bar .btn {
+        font-size: 0.8rem;
+        padding: 6px 15px;
+        border-radius: 20px;
+    }
+  
+    .btn-introduction {
+        padding: 6px 12px;
+        font-size: 10px;
+        top: 25px; /* Уменьшаем отступ сверху */
+        right: 30px; /* Уменьшаем отступ справа */
+    }
+  
+    /* Уменьшаем отступы */
+    .container {
+        padding: 10px;
+    }
   }
-
-  .feelings-text {
-      padding: 10px;
-      font-size: 12px;
-      line-height: 1.4;
-      max-width: 95%; /* Уменьшить ширину текста */
-  }
-
-  .bottom-bar .btn {
-      font-size: 0.8rem;
-      padding: 6px 15px;
-      border-radius: 20px;
-  }
-
-  .btn-introduction {
-      padding: 6px 12px;
-      font-size: 10px;
-      top: 25px; /* Уменьшаем отступ сверху */
-      right: 30px; /* Уменьшаем отступ справа */
-  }
-
-  /* Уменьшаем отступы */
-  .container {
-      padding: 10px;
-  }
-}

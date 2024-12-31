@@ -133,17 +133,35 @@ body {
   }
 }
 
+/* Адаптация для iPhone и устройств шириной до 480px */
 @media (max-width: 480px) {
-  header h1 {
-      font-size: 1.8rem;
+  h1 {
+      font-size: 1.5rem;
+      margin-top: 30px;
   }
 
-  p {
-      font-size: 0.9rem;
+  .trust-text {
+      padding: 10px;
+      font-size: 12px;
+      line-height: 1.4;
+      max-width: 95%; /* Уменьшить ширину текста */
   }
 
-  .button {
+  .bottom-bar .btn {
       font-size: 0.8rem;
-      padding: 7px 10px;
+      padding: 6px 15px;
+      border-radius: 20px;
+  }
+
+  .btn-introduction {
+      padding: 6px 12px;
+      font-size: 10px;
+      top: 25px; /* Уменьшаем отступ сверху */
+      right: 30px; /* Уменьшаем отступ справа */
+  }
+
+  /* Уменьшаем отступы */
+  .container {
+      padding: 10px;
   }
 }
